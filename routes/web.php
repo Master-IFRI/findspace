@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Login Routes...
+Route::get('/', 'App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');
+Route::post('/', 'App\Http\Controllers\Auth\LoginController@login');
+Auth::routes([
+    'register' => false,
+    'login' => false,
+]);
+
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/map', [App\Http\Controllers\HomeController::class, 'map'])->name('map');
+    Route::get('/manage-users', [App\Http\Controllers\HomeController::class, 'manageUsers'])->name('manage-users');
 });
+

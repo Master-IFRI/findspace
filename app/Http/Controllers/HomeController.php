@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+
 class HomeController extends Controller
 {
     /**
@@ -31,6 +33,7 @@ class HomeController extends Controller
 
     public function manageUsers()
     {
-        return view('manage-user');
+        $users = User::all();
+        return view('manage-user')->with(compact(['users']));
     }
 }

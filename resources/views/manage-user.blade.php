@@ -8,24 +8,39 @@
                   <i class="mdi mdi-account-multiple"></i>
                 </span> Manage users
             </h3>
-
         </div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header">{{ __('Dashboard') }}</div>
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Hoverable Table</h4>
+{{--                    <p class="card-description">Description.....--}}
+{{--                    </p>--}}
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($users as $user)
+                            <tr>
+                                <td>{{$user->username}}</td>
+                                <td>{{$user->email}}</td>
+                                <td><label class="badge badge-danger">{{strtoupper($user->roles)}}</label></td>
+                                <td class="text-center">
+                                    <div class="row">
+                                        <i class="text-center text-warning mdi-18px mdi mdi-pen"></i>
+                                        <i class="text-center text-danger mdi-18px mdi mdi-delete"></i>
 
-                        <div class="card-body">
-                            @if (session('status'))
-                                <div class="alert alert-success" role="alert">
-                                    {{ session('status') }}
-                                </div>
-                            @endif
-
-                            {{ __('You are logged in!') }}
-                        </div>
-                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

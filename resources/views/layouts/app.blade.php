@@ -92,7 +92,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Purple Admin</title>
+    <title>Spacefinder</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{asset('vendors/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('vendors/css/vendor.bundle.base.css')}}">
@@ -112,7 +112,7 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo" href="index.html"><img src="{{asset('images/logo.svg')}}"
+            <a class="navbar-brand brand-logo" href="index.html"><img src="{{asset('images/logo (1).svg')}}"
                                                                       alt="logo"/></a>
             <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('images/logo-mini.svg')}}"
                                                                            alt="logo"/></a>
@@ -127,7 +127,7 @@
                     <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown"
                        aria-expanded="false">
                         <div class="nav-profile-img">
-                            <img src="{{asset('images/faces/face1.jpg')}}" alt="image">
+                            <img src="{{asset('images/profil1.jpeg')}}" alt="image">
                             <span class="availability-status online"></span>
                         </div>
                         <div class="nav-profile-text">
@@ -170,7 +170,7 @@
                 <li class="nav-item nav-profile">
                     <a href="#" class="nav-link">
                         <div class="nav-profile-image">
-                            <img src="{{asset('images/faces/face1.jpg')}}" alt="profile">
+                            <img src="{{asset('images/profil1.jpeg')}}" alt="profile">
                             <span class="login-status online"></span>
                             <!--change to offline or busy as needed-->
                         </div>

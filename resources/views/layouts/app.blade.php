@@ -105,6 +105,8 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="images/favicon.ico"/>
+    @yield('top-js')
+
 </head>
 <body>
 <div class="container-scroller">

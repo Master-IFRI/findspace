@@ -23,7 +23,7 @@ Auth::routes([
 
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::match(array('GET', 'POST'), '/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/map', [App\Http\Controllers\HomeController::class, 'map'])->name('map');
     Route::get('/manage-users', [App\Http\Controllers\HomeController::class, 'manageUsers'])->name('manage-users');
 });

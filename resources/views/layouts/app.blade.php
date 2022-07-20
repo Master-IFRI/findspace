@@ -105,10 +105,12 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="images/favicon.ico"/>
+    @yield('top-css')
     @yield('top-js')
 
 </head>
 <body>
+
 <div class="container-scroller">
 
     <!-- partial:partials/_navbar.html -->
@@ -227,6 +229,8 @@
 </div>
 <!-- container-scroller -->
 <!-- plugins:js -->
+@yield('bottom-js')
+
 <script src="{{asset('vendors/js/vendor.bundle.base.js')}}"></script>
 <!-- endinject -->
 <!-- Plugin js for this page -->
@@ -242,6 +246,7 @@
 <script src="{{asset('assets/js/dashboard.js')}}"></script>
 <script src="{{asset('js/todolist.js')}}"></script>
 <!-- End custom js for this page -->
+
 </body>
 
 <!-- Mirrored from www.bootstrapdash.com/demo/purple-admin-free/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Jun 2022 20:11:44 GMT -->
